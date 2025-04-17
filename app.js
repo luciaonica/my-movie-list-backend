@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(cors({
   origin: ['http://localhost:3000', 'http://18.218.51.22:3000/'],
   credentials: true, // if using cookies/sessions
